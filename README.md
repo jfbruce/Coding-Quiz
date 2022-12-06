@@ -22,6 +22,7 @@ Click [here](https://jfbruce.github.io/Coding-Quiz/) to go to the coding quiz pa
 
 The page should load to the starting page as show below
 
+![alt text](https://github.com/jfbruce/Coding-Quiz/blob/main/Assets/coding-quiz-screenshot.png)
 
 ## Credits
 
