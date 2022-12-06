@@ -1,0 +1,77 @@
+
+
+
+
+
+
+
+
+
+
+
+.choice-container {
+    display: flex;
+    margin-bottom: .5rem;
+    width: 100%;
+    font-size: 2rem;
+    border: .1rem lightblue;
+    background-color: indigo;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    background-color: magenta;
+}
+
+.choice-prefix:hover {
+    cursor: pointer;
+    background-color:magenta;
+}
+.choice-prefix {
+    padding: 1.5rem 2.5rem;
+    background-color: indigo;
+    border-radius: 10px 10px 10px 10px;
+    color: white;
+}
+
+.choice-text {
+    padding: 1.5rem;
+    width: 100%;
+    color: white;
+}
+
+.correct {
+    background-color: greenyellow;
+}
+
+.incorrect {
+    background-color: red;
+}
+
+/* HUD Display */
+
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+
+}
+
+.button {
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 1rem;
+    width: 20rem;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.button:hover {
+    cursor: pointer;
+    color: magenta;
+}
