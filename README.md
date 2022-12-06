@@ -10,11 +10,19 @@ N/A
 
 ## Usage
 
-To start the page, click on the "Generate password" button and you will be given prompts to answer to create the password.
+To start the page, click on the "Start quiz" button and you will be taken to the page with the multiple choice questions.
 
-If any inputs are not valid the page will alert you and reset, you can reselect "Generate Password" and input correct responses. 
+Each correct question will change the key to green and give you 5 points displayed above, an incorrect answer will change the button to red and deduct 10 seconds from the timer.
 
-Click [here](https://jfbruce.github.io/Password-Generator/) to go to the Password Generator. 
+Once you have completed the quiz or run out of time you will be taken a page to submit your high score and once you click submit you will be taken to the high scores page.
+
+on the start page and quiz page you can click on "View high scores" to be taken directly to the high scores page.
+
+Click [here](https://jfbruce.github.io/Coding-Quiz/) to go to the coding quiz page. 
+
+The page should load to the starting page as show below
+
+
 
 ## Credits
 

@@ -1,3 +1,4 @@
+// variables that will not be reassigned
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const questionCounterText = document.getElementById("questionCounter");
@@ -8,7 +9,7 @@ const MAX_QUESTIONS = 5;
 const TIME_PENALTY = 10;
 
 
-
+// variables 
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
@@ -16,6 +17,7 @@ let questionCounter = 0;
 let availableQuestions = [];
 let timer = 60;
 
+// question bank to pull questions from
 let questions = [
     {
         question: "Commonly used data types Do Not include:",
@@ -75,7 +77,6 @@ let questions = [
     },
 ];
 
-
 startGame = () => {
     questionCounter = 0;
     score = 0;
@@ -84,11 +85,11 @@ startGame = () => {
     getNewQuestion();
     startTimer();
 };
-// main function to start the quetsions and to move to the submission page
+// main function to start the questions and to move to the submission page
 getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem("mostRecentScore", score);
-        return window.location.assign("/HighScoreSubmit.html");
+        return window.location.assign("HighScoreSubmit.html");
     }
     questionCounter++;
     questionCounterText.innerText = questionCounter + "/" + MAX_QUESTIONS;
@@ -105,7 +106,7 @@ getNewQuestion = () => {
     availableQuesions.splice(questionIndex, 1);
     acceptingAnswers = true;
 };
-// determening what is happeng when
+// determening what is happeng with a correct or incorrect response
 choices.forEach((choice) => {
     choice.addEventListener("click", (e) => {
         if (!acceptingAnswers) return;
@@ -135,17 +136,17 @@ incrementScore = num => {
     score += num;
     scoreText.innerText = score;
 }
-
+// removes 10 seconds if incorrect answer is chosen
 penalizeTimer = num => {
     timer -= num;
 }
-
+// the end is to stop the page and pull to the next page if timer runs below 0
 startTimer = () => {
     setInterval(function () {
         timerText.innerHTML = timer;
         timer--;
         if (timer < 1) {
-            window.location.assign("/highScoreSubmit.html")
+            window.location.assign("highScoreSubmit.html")
         }
     }, 1000);
 }
