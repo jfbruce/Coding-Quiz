@@ -3,6 +3,11 @@ const choices = Array.from(document.getElementsByClassName("choice-text"));
 const questionCounterText = document.getElementById("questionCounter");
 const scoreText = document.getElementById("score");
 const timerText = document.getElementById("countdownTimer");
+const CORRECT_BONUS = 5;
+const MAX_QUESTIONS = 5;
+const TIME_PENALTY = 10;
+
+
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -13,45 +18,73 @@ let timer = 60;
 
 let questions = [
     {
-        question: "what is your favorate color",
-        choice1: "blue",
-        choice2: "green",
-        choice3: "yellow",
-        choice4: "red",
-        answer: 1,
+        question: "Commonly used data types Do Not include:",
+        choice1: "1. strings",
+        choice2: "2. booleans",
+        choice3: "3. alerts",
+        choice4: "4. numbers",
+        answer: 3,
     },
     {
-        question: "what is your favorate food",
-        choice1: "pizza",
-        choice2: "pie",
-        choice3: "dog",
-        choice4: "cat",
-        answer: 2,
+        question: "The condition if an if / else statement is enclosed with ________.",
+        choice1: "1. quotes",
+        choice2: "2. curly brackets",
+        choice3: "3. parenthesis",
+        choice4: "4. square bracket",
+        answer: 3,
     },
     {
-        question: "what is your favorate car",
-        choice1: "toyota",
-        choice2: "honda",
-        choice3: "audi",
-        choice4: "ford",
+        question: "Arrays in JavaScript can be used to store _______.",
+        choice1: "1. numbers and strings",
+        choice2: "2. other arrays",
+        choice3: "3. booleans",
+        choice4: "4. all of the above",
+        answer: 4
+    },
+    {
+        question: "String values must be enclosed within ______ when being assigned to variables",
+        choice1: "1. commas",
+        choice2: "2. curly brackets",
+        choice3: "3. quotes",
+        choice4: "4. parenthsis",
         answer: 3
+    },    
+    {
+        question: "A very useful tool used during development and debugging for printing content to the debugger is:",
+        choice1: "1. javascript",
+        choice2: "2. terminal/bash",
+        choice3: "3. for loops",
+        choice4: "4. console.log",
+        answer: 4
+    },
+    {
+        question: "Where is a stylesheet inserted in the html",
+        choice1: "1. header",
+        choice2: "2. body",
+        choice3: "3. footer",
+        choice4: "4. anywhere you want",
+        answer: 1
+    },
+    {
+        question: "How do you add rounded corners in CSS",
+        choice1: "1. borderrounded:",
+        choice2: "2. border-radius",
+        choice3: "3. border:",
+        choice4: "4. corners:",
+        answer: 2
     },
 ];
 
-//CONSTANTS
-const CORRECT_BONUS = 1;
-const MAX_QUESTIONS = 3;
-const TIME_PENALTY = 10;
 
 startGame = () => {
     questionCounter = 0;
     score = 0;
-    timer = 9900;
+    timer = 60;
     availableQuesions = [...questions];
     getNewQuestion();
     startTimer();
 };
-
+// main function to start the quetsions and to move to the submission page
 getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem("mostRecentScore", score);
@@ -72,7 +105,7 @@ getNewQuestion = () => {
     availableQuesions.splice(questionIndex, 1);
     acceptingAnswers = true;
 };
-
+// determening what is happeng when
 choices.forEach((choice) => {
     choice.addEventListener("click", (e) => {
         if (!acceptingAnswers) return;
@@ -80,12 +113,6 @@ choices.forEach((choice) => {
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
-
-        // const classToApply = "incorrect";
-        // if (selectedAnswer == currentQuestion.answer){
-        //     classToApply = "correct";
-        // }
-
         const classToApply =
             selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
 

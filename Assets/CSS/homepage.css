@@ -13,7 +13,7 @@
 
 .container {
     width: 100vw;
-    height: 70vw;
+    height: 45vw;
     padding: 4rem;
     display: flex;
     justify-content: center;
@@ -21,7 +21,7 @@
     max-width: 80rem;
     margin: 0 auto;
     border: 2px solid black;
-    border-radius: px;
+    border-radius: 7px;
 }
 
 .flex-column {
@@ -52,13 +52,20 @@ h3 {
     font-weight: 700;
 }
 
+.hud-main-text {
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+#link {
+    color: magenta;
+    padding-right: 45rem;
+    padding-bottom: 15rem;
+}
 #hud {
     font-size: 1.4rem;
     display: flex;
-}
-
-#highScores {
-    color: orchid
+    justify-content: space-between;
 }
 
 .button {
@@ -77,5 +84,3 @@ h3 {
     cursor: pointer;
     background-color: orchid;
 }
-
-

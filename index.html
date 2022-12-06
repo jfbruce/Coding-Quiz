@@ -6,17 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Start Page</title>
-    <link rel="stylesheet" href="/Assets/homepage.css">
+    <link rel="stylesheet" href="/Assets/CSS/homepage.css">
 </head>
 
 <body>
     <div class="container">
         <div id="home" class="flex-center flex-column">
             <div id="hud">
-                <h4 id="highScores" href="/highScores.html">View high scores</h4>
-                <h4>Time: 0</h4>
+                <a class="hud-main-text" id="link" href="/highScores.html">View high scores</a>
+                <p class="hud-main-text" id="countdownTimer">Time: 60</p>
+                
             </div>
-
+            <div id="hud-item">
+                <p class="hud-prefix"></p>
+            </div>
             <h1>Coding Quiz Challenge</h1>
             <h3>Try to answer the following code-related questions within the time limit.</h3>
             <h3>Keep in mind that incorrect answers will penalize your score/time</h3>
@@ -26,7 +29,7 @@
     </div>
 
 
-    <script src="/Assets/game.js"></script>
+    <script src="/Assets/JavaScript/game.js"></script>
 </body>
 
 </html>

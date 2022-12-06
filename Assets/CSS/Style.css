@@ -16,12 +16,6 @@ h1 {
     color: black;
     margin-bottom: 5rem;
 }
-h1 > span {
-    font-size: 524rem;
-    color: black;
-    margin-bottom: 5rem;
-    font-weight: 500;
-}
 
 h2 {
     font-size: 4.2rem;
@@ -36,17 +30,18 @@ h3 {
     font-weight: 700;
 }
 
-/*    Utilities   */
 
 .container {
     width: 100vw;
-    height: 100vw;
+    height: 40vw;
     padding: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 80rem;
     margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 7px;
 }
 
 .choice-container {
@@ -83,13 +78,16 @@ h3 {
     padding: 1rem;
     width: 20rem;
     text-align: center;
-    border: .1rem solid lightcoral;
     margin-bottom: 1rem;
+    background-color: indigo;
+    border-radius: 7px;
+    color: white;
+    margin-left: 1rem;
 }
 
 .button:hover {
     cursor: pointer;
-    color: magenta;
+    background-color: magenta;
 }
 
 .button[disable]:hover {

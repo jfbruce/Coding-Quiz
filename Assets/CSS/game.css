@@ -1,14 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
 .choice-container {
     display: flex;
     margin-bottom: .5rem;
@@ -58,8 +49,12 @@
 
 .hud-prefix {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.4rem;
 
+}
+
+.a {
+    color: magenta;
 }
 
 .button {
@@ -74,4 +69,14 @@
 .button:hover {
     cursor: pointer;
     color: magenta;
+}
+
+.hud-main-text {
+    font-size: 2rem;
+}
+
+.link {
+    text-decoration: none;
+    color: magenta;
+
 }
